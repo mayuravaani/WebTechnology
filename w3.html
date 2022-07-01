@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes 
+https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule -->
+  <head>
+    <title>Credible Food</title>
+	<link rel="icon" href="favicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+	<link rel="stylesheet" href="mystyle.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+	.w3-bar-block .w3-bar-item {padding:20px}
+	h3:hover {
+	color:green;
+	font-weight: bold;
+	background-color: orange
+	}
+	h3 + p:hover {
+		color:white;
+		font-weight: bold;
+		background-color: black
+	}
+	#shopname {
+		font-weight:bold;
+		color: red;
+		font-family: arial;
+		
+	}
+	img {
+		opacity:60%;
+	}
+	img:hover {
+		opacity: 100%
+	}
+	#sub {
+		border: 3px black solid;
+	}
+	input:focus, textarea:focus, select:focus {
+		
+		outline: none;
+        border-color: purple;
+        box-shadow: 0 0 10px blue;
+	}
+	
+    </style>
+  </head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about"  onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="#menuitem"  onclick="w3_close()" class="w3-bar-item w3-button">Menu Table</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
+  <a href="#reg" onclick="w3_close()" class="w3-bar-item w3-button">Customer Registration</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">Mail</div>
+    <div class="w3-center w3-padding-16" id="shopname"style="text-decoration: blink;">Credible Food</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/steak.jpg" alt="Steak" style="width:100%">
+      <h3>Let Me Tell You About This Steak</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images.jpg" alt="pizza" style="width:100%;height:100%" >
+      <h3>Pizza, Cheesy</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+      <h3>All I Need Is a Popsicle</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+      <h3>Salmon For Your Skin</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+      <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Me, The Food Man</h3><br>
+    <img src="food.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+	<h3>Our Kitchen Tour</h3><br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Dsu9JiKLVas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <hr>
+    <hr id="menuitem">
+
+  <!-- Registration Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+	<div  style="border: 5px outset yellow;">
+    <h3>Credidible Food &emsp;&emsp;&emsp;&emsp;&emsp; Since 2000 </h3><br>
+    <div class="w3-padding-32">
+	<table class ="w3-table-all w3-hoverable w3-striped" >
+	<tr><th colspan="3" style="text-align:center">Credible Food  Menu   </th></tr>
+	<tr><td rowspan="4" style="padding-top:70px;text-align:center"> Pizza </td> <td>	Margherita</td><td>25$</td></tr>
+	<tr><td> Sicilian </td><td>20$</td></tr>
+	<tr><td> BBQ Chicken </td><td>25$</td></tr>
+	<tr><td> Sea Food</td><td>25$</td></tr>
+	<tr><td rowspan="3" style="padding-top:60px;text-align:center"> Burgers </td> <td> Cheeseburger </td><td>4$</td></tr>
+	<tr><td> Double Cheeseburger </td><td>9$</td></tr>
+	<tr><td> Bacon Cheeseburger</td><td>7$</td></tr>
+	<tr><td rowspan="2" style="padding-top:40px;text-align:center"> Breakfast </td> <td> Breakfast Sandwich </td><td>4$</td></tr>
+	<tr><td> Breakfast Burrito </td><td>6$</td></tr>
+	</table>
+	
+    </div>
+	</div>
+  </div>
+  <hr>
+  <hr id="contact">
+
+  <!-- Locate Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>Locate Us, Credible Food</h3><br>
+    <div class="w3-padding-32">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.9549175918596!2d80.01897391434971!3d9.684888993067636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe54126a40eb61%3A0x465f86acc2b920a1!2zVW5pdmVyc2l0eSBvZiBKYWZmbmEgRmFjdWx0eSBvZiBTY2llbmNlIOCur-CuvuCutOCvjeCuquCvjeCuquCuvuCuoyDgrqrgrrLgr43grpXgrrLgr4jgrpXgr43grpXgrrTgrpXgrq7gr40g4K614K6_4K6e4K-N4K6e4K6-4K6pIOCuquCvgOCun-CuruCvjQ!5e0!3m2!1sen!2slk!4v1653267567216!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <hr>
+  
+  
+  <hr id="reg">
+
+  <!-- Registration Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+	<div  style="border: 5px outset red;">
+    <h3>Customer Registration</h3><br>
+    <div class="w3-padding-32">
+	<form>
+	First Name: <input type="text" name="fname"><br><br>
+	
+	Last Name: <input  type="text" name="lname"><br><br>
+	Email: &emsp;&emsp; <input  type="email" name="mail"><br><br>
+	Gender: &emsp;&emsp;<select style="width:180px" class="w3-dropdown-click w3-dropdown-hover"> <option value="m"> Male </option><option value="f">Female</option></select><br><br>
+	Tel No: &emsp;&emsp; <input type="number"><br><br>
+	Address: &emsp;&emsp;<textarea></textarea><br><br>
+	Password:&emsp;&emsp; <input  type="password" name="add"><br><br>
+	<button type="submit" class="w3-button w3-hover-blue" id="sub">Submit</button>
+	
+	</form>
+	
+    </div>
+	</div>
+  </div>
+  <hr>
+  
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>Address</h3>
+      <Address>
+		You can  contact via email at <a href="mailto:credible@example.com">credible@example.com</a> <br>
+		"credible Food",<br>
+		University of Jaffna,<br>
+		Jaffna,<br>
+		Sri Lanka.</Address>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="https://www.w3schools.com/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="https://www.w3schools.com/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

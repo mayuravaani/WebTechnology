@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script  type="text/javascript">
+		function sayHello(){alert(9+8)};		
+		</script>
+	</head>
+	<body>
+	<script>
+	
+function light(sw) {
+  if (sw == "red") {
+    pic = "red.jpg"
+  } else if(sw == "yellow") {
+    pic = "yellow.jpg"
+  } else if(sw == "orange") {
+    pic = "orange.jpg"
+  } else if(sw == "pink") {
+    pic = "pink.jpg"
+  }
+  document.getElementById('myImage').src = pic;
+}
+alert("Hi")
+</script>
+<div align="Center">
+<img id="myImage" src="default.jpg" >
+
+<p>
+<button type="button" onclick="light('red')" style="background-color:red">Colour me</button>
+<button type="button" onclick="light('yellow')" style="background-color:yellow">Colour me</button>
+<button type="button" onclick="light('pink')" style="background-color:pink">Colour me</button>
+<button type="button" onclick="light('orange')" style="background-color:orange">Colour me</button>
+</p>
+</div>
+
+
+
+
+	</body>
+</html>
