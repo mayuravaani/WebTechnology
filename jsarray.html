@@ -1,0 +1,51 @@
+
+
+<html>
+ <head>
+ <title>Sample Document</title>
+ <script>
+var emp=new Array("Jai","Vijay","Smith");  
+for (i=0;i<emp.length;i++){  
+	document.write(emp[i] + "<br>");  
+}  
+
+
+</script>
+ </head>
+ <body>
+ <h1>An HTML Document</h1>
+ <p>This is a <i>simple</i> document. </p>
+ <script>
+ const paragraphs = document.querySelectorAll("p");
+// paragraphs[0] is the first <p> element
+// paragraphs[1] is the second <p> element, etc.
+alert(paragraphs[0].nodeName);
+ </script>
+ 
+ <table border=1>
+	<tr><th colspan="3" style="text-align:center">Credible Food  Menu   </th></tr>
+	<tr><td rowspan="4" style="padding-top:70px;text-align:center"> Pizza </td> <td>	Margherita</td><td>25$</td></tr>
+	<tr><td> Sicilian </td><td>20$</td></tr>
+	<tr><td> BBQ Chicken </td><td>25$</td></tr>
+	<tr><td> Sea Food</td><td>25$</td></tr>
+	<tr><td rowspan="3" style="padding-top:60px;text-align:center"> Burgers </td> <td> Cheeseburger </td><td>4$</td></tr>
+	<tr><td> Double Cheeseburger </td><td>9$</td></tr>
+	<tr><td> Bacon Cheeseburger</td><td>7$</td></tr>
+	<tr><td rowspan="2" style="padding-top:40px;text-align:center"> Breakfast </td> <td> Breakfast Sandwich </td><td>4$</td></tr>
+	<tr><td> Breakfast Burrito </td><td>6$</td></tr>
+	</table>
+	<script>
+	alert("j");
+	const table = document.getElementById("table");
+const tableAttrs = table.attributes; // Node/Element interface
+alert("tableat" + table);
+for (let i = 0; i < tableAttrs.length; i++) {
+  // HTMLTableElement interface: border attribute
+  if(tableAttrs[i].nodeName.toLowerCase() == "border")
+	table.border = "10";
+}
+// HTMLTableElement interface: summary attribute
+table.summary = "note: increased border";
+	</script>
+ </body>
+</html>
